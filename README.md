@@ -1,24 +1,12 @@
-# README
+# Active Storage Example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example application for learning the basics of Active Storage. The app allows a logged in user to create posts that contain a title and some categories.
 
-Things you may want to cover:
+At this point, you have been hired to add the ability for a user to include an image with their post using Active Storage.
 
-* Ruby version
+Here are the use cases for you to implement:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- As a signed in User, I should be able to optionally add one image to a post.
+- As a signed in User on the show page for a post, I should be able to see a smaller version of the image (about 200x200 pixels)
+- As a signed in User on the show page for a post, I should be able to click on the image to view a larger image.
+- As a guest visiting the posts index page, I should be able to see a small (50x50) version of the image next to each post.
