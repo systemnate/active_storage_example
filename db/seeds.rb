@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(email: 'user@example.com', password: 'password')
+Category.destroy_all
 Category.create(name: 'animals')
 Category.create(name: 'people')
 Category.create(name: 'places')
