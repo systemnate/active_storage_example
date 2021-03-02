@@ -13,5 +13,9 @@
   <%= @post.user.email %>
 </p>
 
+<p>
+  <%= link_to image_tag(@post.image.url(:medium)), @post.image.url %>
+</p>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
