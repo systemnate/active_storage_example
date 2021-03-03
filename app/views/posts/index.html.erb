@@ -19,7 +19,7 @@
         <td><%= post.user.email %></td>
         <td>
           <% if post.image.present? %>
-            <%= image_tag post&.image.url(:thumb) %>
+            <%= image_tag post&.image.expiring_url(3600, :thumb) %>
           <% end %>
         </td>
         <td><%= link_to 'Show', post %></td>

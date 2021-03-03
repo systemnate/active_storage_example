@@ -74,4 +74,16 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.paperclip_defaults = {
+    storage:          :s3,
+    s3_permissions:   :private,
+    s3_region:        'us-east-2',
+    s3_host_name:     's3-us-east-2.amazonaws.com',
+    s3_credentials: {
+      access_key_id: Rails.application.credentials.dig(:aws, :access_key_id),
+      secret_access_key: Rails.application.credentials.dig(:aws, :secret_access_key),
+      bucket: 'mbctestweb-activestorage',
+      region: 'us-east-2',
+    }
+  }
 end
